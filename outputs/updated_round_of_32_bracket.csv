@@ -1,0 +1,33 @@
+match_id,stage,slot_home,slot_away,team_home,team_away,p_home_win,p_away_win,most_likely_winner,simulated_winner,simulated_loser
+73,Round of 32,Runner-up Group A,Runner-up Group B,Mexico,Bosnia and Herzegovina,0.6520497430988911,0.3479502569011089,Mexico,Bosnia and Herzegovina,Mexico
+74,Round of 32,Winner Group C,Runner-up Group F,Morocco,Netherlands,0.56237829700523,0.43762170299477,Morocco,Morocco,Netherlands
+75,Round of 32,Winner Group E,Best 3rd (Groups A/B/C/D/F),Germany,Sweden,0.8052271638189848,0.19477283618101515,Germany,Germany,Sweden
+76,Round of 32,Winner Group F,Runner-up Group C,Japan,Brazil,0.3259526240431001,0.6740473759568999,Brazil,Japan,Brazil
+77,Round of 32,Runner-up Group E,Runner-up Group I,Côte d'Ivoire,Norway,0.3229421565348739,0.6770578434651261,Norway,Norway,Côte d'Ivoire
+78,Round of 32,Winner Group I,Best 3rd (Groups C/D/F/G/H),France,Turkey,0.7953755820108953,0.2046244179891047,France,France,Turkey
+79,Round of 32,Winner Group A,Best 3rd (Groups C/E/F/H/I),South Korea,Scotland,0.5506630101803475,0.44933698981965253,South Korea,Scotland,South Korea
+80,Round of 32,Winner Group L,Best 3rd (Groups E/H/I/J/K),England,Austria,0.7071126747576888,0.2928873252423112,England,England,Austria
+81,Round of 32,Winner Group G,Best 3rd (Groups A/E/H/I/J),Belgium,South Africa,0.9560577629260022,0.0439422370739978,Belgium,Belgium,South Africa
+82,Round of 32,Winner Group D,Best 3rd (Groups B/E/F/I/J),Paraguay,Switzerland,0.30020502125442605,0.699794978745574,Switzerland,Paraguay,Switzerland
+83,Round of 32,Runner-up Group K,Runner-up Group L,Colombia,Croatia,0.4329840934114219,0.567015906588578,Croatia,Colombia,Croatia
+84,Round of 32,Winner Group H,Runner-up Group J,Spain,Argentina,0.6729257212626599,0.3270742787373401,Spain,Spain,Argentina
+85,Round of 32,Winner Group B,Best 3rd (Groups E/F/G/I/J),Canada,Senegal,0.26210144788034256,0.7378985521196575,Senegal,Senegal,Canada
+86,Round of 32,Runner-up Group D,Runner-up Group G,Australia,Egypt,0.4039107318699253,0.5960892681300747,Egypt,Australia,Egypt
+87,Round of 32,Winner Group J,Runner-up Group H,Algeria,Saudi Arabia,0.814860403367265,0.18513959663273505,Algeria,Saudi Arabia,Algeria
+88,Round of 32,Winner Group K,Best 3rd (Groups D/E/I/J/L),Portugal,Uruguay,0.6954390075694963,0.3045609924305037,Portugal,Portugal,Uruguay
+89,Round of 16,Winner Match 73,Winner Match 75,Bosnia and Herzegovina,Germany,0.06344461038903933,0.9365553896109606,Germany,Germany,Bosnia and Herzegovina
+90,Round of 16,Winner Match 74,Winner Match 77,Morocco,Norway,0.41347753314159086,0.5865224668584091,Norway,Norway,Morocco
+91,Round of 16,Winner Match 76,Winner Match 78,Japan,France,0.20185240830903856,0.7981475916909615,France,France,Japan
+92,Round of 16,Winner Match 79,Winner Match 80,Scotland,England,0.2413971927107146,0.7586028072892854,England,England,Scotland
+93,Round of 16,Winner Match 83,Winner Match 84,Colombia,Spain,0.17960001066502468,0.8203999893349754,Spain,Spain,Colombia
+94,Round of 16,Winner Match 81,Winner Match 82,Belgium,Paraguay,0.6983462548116077,0.3016537451883923,Belgium,Belgium,Paraguay
+95,Round of 16,Winner Match 86,Winner Match 88,Australia,Portugal,0.11866525895275401,0.881334741047246,Portugal,Portugal,Australia
+96,Round of 16,Winner Match 85,Winner Match 87,Senegal,Saudi Arabia,0.8450941749817051,0.15490582501829486,Senegal,Senegal,Saudi Arabia
+97,Quarter-final,Winner Match 89,Winner Match 90,Germany,Norway,0.6931781387130657,0.30682186128693434,Germany,Germany,Norway
+98,Quarter-final,Winner Match 93,Winner Match 94,Spain,Belgium,0.764508157611727,0.23549184238827303,Spain,Spain,Belgium
+99,Quarter-final,Winner Match 91,Winner Match 92,France,England,0.6543883320411068,0.3456116679588932,France,France,England
+100,Quarter-final,Winner Match 95,Winner Match 96,Portugal,Senegal,0.6988063106787977,0.3011936893212023,Portugal,Senegal,Portugal
+101,Semi-final,Winner Match 97,Winner Match 98,Germany,Spain,0.3978551880417423,0.6021448119582578,Spain,Germany,Spain
+102,Semi-final,Winner Match 99,Winner Match 100,France,Senegal,0.8123112888675743,0.1876887111324257,France,France,Senegal
+103,Third-place playoff,Loser Match 101,Loser Match 102,Spain,Senegal,0.8286773595455543,0.17132264045444567,Spain,Spain,Senegal
+104,Final,Winner Match 101,Winner Match 102,Germany,France,0.4212294099820212,0.5787705900179788,France,Germany,France
