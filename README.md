@@ -1,6 +1,10 @@
 # Copa 2026 Predictor
 
 <p align="center">
+  <img src="wallpaper_fifa.jpg" alt="Capa do projeto Copa 2026 Predictor" width="100%">
+</p>
+
+<p align="center">
   <b>Pipeline analítico para estimar probabilidades da Copa do Mundo FIFA 2026 usando dados esportivos, força técnica das seleções e simulação Monte Carlo.</b>
 </p>
 
