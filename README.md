@@ -1,10 +1,6 @@
 # Copa 2026 Predictor
 
 <p align="center">
-  <img src="outputs/professional_executive_dashboard.png" alt="Dashboard executivo da simulação da Copa 2026" width="1000">
-</p>
-
-<p align="center">
   <b>Pipeline analítico para estimar probabilidades da Copa do Mundo FIFA 2026 usando dados esportivos, força técnica das seleções e simulação Monte Carlo.</b>
 </p>
 
@@ -12,7 +8,7 @@
   <img alt="Python" src="https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white">
   <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white">
   <img alt="Pandas" src="https://img.shields.io/badge/Pandas-Data%20Pipeline-150458?style=flat-square&logo=pandas&logoColor=white">
-  <img alt="Monte Carlo" src="https://img.shields.io/badge/Monte%20Carlo-10.000%20simulações-0F766E?style=flat-square">
+  <img alt="Monte Carlo" src="https://img.shields.io/badge/Monte%20Carlo-100.000%20simulações-0F766E?style=flat-square">
   <img alt="Status" src="https://img.shields.io/badge/tests-passing-16A34A?style=flat-square">
 </p>
 
@@ -41,6 +37,16 @@ O modelo estima:
 
 ## Resultados principais
 
+### Animação das probabilidades de título
+
+<p align="center">
+  <img src="outputs/professional_champion_probability_animation.gif" alt="Animação das probabilidades de título da Copa 2026" width="950">
+</p>
+
+A animação resume o ranking final de chances de título após `100.000` torneios simulados.
+
+---
+
 ### Ranking de probabilidade de título
 
 <p align="center">
@@ -49,16 +55,16 @@ O modelo estima:
 
 | Rank | Seleção | Título | Final | Semifinal |
 |---:|---|---:|---:|---:|
-| 1 | Espanha | 22,34% | 32,66% | 48,34% |
-| 2 | França | 21,15% | 33,36% | 48,24% |
-| 3 | Alemanha | 12,96% | 23,54% | 41,16% |
-| 4 | Portugal | 8,03% | 16,64% | 31,24% |
-| 5 | Argentina | 6,71% | 13,53% | 25,99% |
-| 6 | Brasil | 6,57% | 13,47% | 25,04% |
-| 7 | Inglaterra | 5,75% | 12,82% | 22,64% |
-| 8 | Croácia | 2,33% | 6,45% | 14,61% |
-| 9 | Bélgica | 2,10% | 5,66% | 14,38% |
-| 10 | Suíça | 2,07% | 6,01% | 14,95% |
+| 1 | Espanha | 22,38% | 33,28% | 48,61% |
+| 2 | França | 21,08% | 32,89% | 48,12% |
+| 3 | Alemanha | 13,24% | 23,79% | 41,46% |
+| 4 | Portugal | 7,99% | 16,43% | 31,20% |
+| 5 | Argentina | 6,72% | 13,95% | 26,05% |
+| 6 | Brasil | 6,35% | 13,23% | 25,19% |
+| 7 | Inglaterra | 5,74% | 12,36% | 23,19% |
+| 8 | Croácia | 2,44% | 6,40% | 14,28% |
+| 9 | Suíça | 2,20% | 6,09% | 15,26% |
+| 10 | Bélgica | 2,17% | 5,86% | 14,59% |
 
 ---
 
@@ -151,6 +157,8 @@ Mais detalhes sobre os dados estão em `Data/README.md`.
 | `tools/build_copa_2026_data_pipeline.py` | Script de construção da base processada |
 | `tools/update_vencedor_copa_notebook.py` | Script para atualizar notebook e outputs finais |
 | `tools/create_professional_readme_charts.py` | Script que gera os gráficos profissionais do README |
+| `tools/create_animated_champion_chart.py` | Script que gera a animação em GIF do ranking de título |
+| `tools/run_fast_100k_simulation.py` | Script otimizado para rodar 100.000 simulações |
 | `Data/processed/copa_2026_master_team_dataset.csv` | Base consolidada por seleção |
 | `outputs/updated_2026_probabilities.csv` | Probabilidades finais por seleção |
 | `outputs/updated_round_of_32_bracket.csv` | Confrontos e probabilidades do Round of 32 |
@@ -176,7 +184,7 @@ source .venv/bin/activate
 Instale as dependências principais:
 
 ```bash
-pip install pandas numpy matplotlib openpyxl pytest
+pip install pandas numpy matplotlib pillow openpyxl pytest
 ```
 
 Execute os testes:
@@ -185,10 +193,17 @@ Execute os testes:
 python -m pytest -q
 ```
 
+Regere a simulação com `100.000` torneios:
+
+```bash
+python tools/run_fast_100k_simulation.py
+```
+
 Regere os gráficos profissionais do README:
 
 ```bash
 python tools/create_professional_readme_charts.py
+python tools/create_animated_champion_chart.py
 ```
 
 ---
@@ -199,7 +214,7 @@ python tools/create_professional_readme_charts.py
 |---|---:|
 | Seleções | 48 |
 | Grupos | 12 |
-| Simulações Monte Carlo | 10.000 |
+| Simulações Monte Carlo | 100.000 |
 | Seed | 42 |
 | Formato | 12 grupos de 4 + mata-mata com 32 seleções |
 | Testes | Passing |

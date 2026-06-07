@@ -52,7 +52,7 @@ except Exception:
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 SEED = 42
-SIMULATIONS = 10_000
+SIMULATIONS = 100_000
 rng = np.random.default_rng(SEED)
 
 ROOT = Path.cwd()

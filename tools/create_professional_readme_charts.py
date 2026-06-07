@@ -15,7 +15,6 @@ import pandas as pd
 from matplotlib.axes import Axes
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.figure import Figure
-from matplotlib.patches import FancyBboxPatch
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "outputs"
@@ -252,71 +251,8 @@ def make_bracket_strength(bracket: pd.DataFrame) -> None:
     save(fig, "professional_round32_balance.png")
 
 
-def make_executive_dashboard(probs: pd.DataFrame) -> None:
-    fig = plt.figure(figsize=(16, 9))
-    gs = fig.add_gridspec(2, 4, height_ratios=[0.9, 2.6], width_ratios=[1, 1, 1, 1], hspace=0.34, wspace=0.22)
-
-    cards = [
-        ("10.000", "simulações", BLUE),
-        ("48", "seleções", GREEN),
-        ("22,34%", "maior chance de título", GOLD),
-        ("12", "grupos", PURPLE),
-    ]
-    for i, (value, label, color) in enumerate(cards):
-        ax = fig.add_subplot(gs[0, i])
-        ax.set_axis_off()
-        box = FancyBboxPatch(
-            (0.02, 0.12),
-            0.96,
-            0.76,
-            boxstyle="round,pad=0.025,rounding_size=0.06",
-            facecolor=PANEL,
-            edgecolor=GRID,
-            linewidth=1.2,
-            transform=ax.transAxes,
-        )
-        ax.add_patch(box)
-        ax.text(0.08, 0.58, value, transform=ax.transAxes, fontsize=27, fontweight="bold", color=color, ha="left", va="center")
-        ax.text(0.08, 0.34, label.upper(), transform=ax.transAxes, fontsize=10, color=MUTED, ha="left", va="center", fontweight="bold")
-
-    ax1 = fig.add_subplot(gs[1, :2])
-    top = probs.head(8).sort_values("champion_probability")
-    ax1.barh(top["team"], top["champion_probability"] * 100, color=[GOLD if x in {"Spain", "France"} else BLUE for x in top["team"]], height=0.65)
-    for y, v in enumerate(top["champion_probability"] * 100):
-        ax1.text(v + 0.35, y, f"{v:.1f}%", va="center", fontsize=10, color=TEXT, fontweight="bold")
-    title_bar(ax1, "Ranking de título", "Top 8 por probabilidade de campeão")
-    ax1.set_xlabel("Probabilidade (%)")
-    ax1.set_ylabel("")
-    ax1.set_xlim(0, 25)
-    ax1.grid(axis="x", linestyle="--")
-    ax1.grid(axis="y", visible=False)
-    for s in ax1.spines.values():
-        s.set_visible(False)
-
-    ax2 = fig.add_subplot(gs[1, 2:])
-    phases = ["round_of_16_probability", "quarter_final_probability", "semi_final_probability", "final_probability", "champion_probability"]
-    labels = ["Oitavas", "Quartas", "Semis", "Final", "Título"]
-    for color, team in zip([GOLD, BLUE, GREEN, RED], probs.head(4)["team"]):
-        values = probs.loc[probs["team"] == team, phases].iloc[0].to_numpy(dtype=float) * 100
-        ax2.plot(labels, values, marker="o", linewidth=3, markersize=7, label=team, color=color)
-    title_bar(ax2, "Trajetória dos favoritos", "Probabilidade acumulada por fase")
-    ax2.set_ylabel("Probabilidade (%)")
-    ax2.set_ylim(0, 90)
-    ax2.grid(axis="y", linestyle="--")
-    ax2.grid(axis="x", visible=False)
-    ax2.legend(loc="upper right")
-    for s in ax2.spines.values():
-        s.set_visible(False)
-
-    fig.suptitle("Copa do Mundo 2026 — Simulação probabilística", x=0.03, y=0.99, ha="left", fontsize=24, fontweight="bold", color=TEXT)
-    fig.text(0.03, 0.94, "Visão executiva dos resultados do modelo Monte Carlo", ha="left", fontsize=12, color=MUTED)
-    add_footer(fig)
-    save(fig, "professional_executive_dashboard.png")
-
-
 def main() -> None:
     probs, bracket = load_data()
-    make_executive_dashboard(probs)
     make_title_ranking(probs)
     make_phase_heatmap(probs)
     make_funnel(probs)
