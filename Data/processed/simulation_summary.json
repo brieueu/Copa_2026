@@ -1,0 +1,10 @@
+{
+  "teams": 48,
+  "groups": 12,
+  "teams_per_group_min": 4,
+  "teams_per_group_max": 4,
+  "group_matches": 72,
+  "qualified_round_of_32": 32,
+  "knockout_matches": 32,
+  "simulated_champion": "Spain"
+}

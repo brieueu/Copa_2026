@@ -1,0 +1,33 @@
+match_id,stage,slot_home,slot_away,team_home,team_away,p_home_win,winner,loser,date_utc,stadium,city
+73,Round of 32,Runner-up Group A,Runner-up Group B,Mexico,Switzerland,0.3315473407596672,Switzerland,Mexico,2026-06-28T19:00:00Z,SoFi Stadium,Los Angeles
+74,Round of 32,Winner Group C,Runner-up Group F,Morocco,Japan,0.45245113405727927,Japan,Morocco,2026-06-29T17:00:00Z,NRG Stadium,Houston
+75,Round of 32,Winner Group E,Best 3rd (Groups A/B/C/D/F),Germany,South Africa,0.918515811617382,South Africa,Germany,2026-06-29T20:30:00Z,Gillette Stadium,Boston
+76,Round of 32,Winner Group F,Runner-up Group C,Netherlands,Haiti,0.8705488190164253,Netherlands,Haiti,2026-06-30T01:00:00Z,Estadio BBVA,Monterrey
+77,Round of 32,Runner-up Group E,Runner-up Group I,Ecuador,Norway,0.45578812080350134,Norway,Ecuador,2026-06-30T17:00:00Z,AT&T Stadium,Dallas
+78,Round of 32,Winner Group I,Best 3rd (Groups C/D/F/G/H),France,Sweden,0.8330928144855454,France,Sweden,2026-06-30T21:00:00Z,MetLife Stadium,East Rutherford
+79,Round of 32,Winner Group A,Best 3rd (Groups C/E/F/H/I),South Korea,Côte d'Ivoire,0.5656992361904226,Côte d'Ivoire,South Korea,2026-07-01T01:00:00Z,Estadio Azteca,Mexico City
+80,Round of 32,Winner Group L,Best 3rd (Groups E/H/I/J/K),England,Algeria,0.7155185387235831,England,Algeria,2026-07-01T16:00:00Z,Mercedes-Benz Stadium,Atlanta
+81,Round of 32,Winner Group G,Best 3rd (Groups A/E/H/I/J),Belgium,Croatia,0.4621954539404044,Belgium,Croatia,2026-07-01T20:00:00Z,Lumen Field,Seattle
+82,Round of 32,Winner Group D,Best 3rd (Groups B/E/F/I/J),USA,Egypt,0.5505664241981408,Egypt,USA,2026-07-02T00:00:00Z,Levi's Stadium,Santa Clara
+83,Round of 32,Runner-up Group K,Runner-up Group L,Colombia,Panama,0.8191607409952063,Colombia,Panama,2026-07-02T19:00:00Z,BMO Field,Toronto
+84,Round of 32,Winner Group H,Runner-up Group J,Spain,Austria,0.9007840008410432,Spain,Austria,2026-07-02T23:00:00Z,SoFi Stadium,Los Angeles
+85,Round of 32,Winner Group B,Best 3rd (Groups E/F/G/I/J),Canada,Turkey,0.3799989289384603,Canada,Turkey,2026-07-03T03:00:00Z,BC Place,Vancouver
+86,Round of 32,Runner-up Group D,Runner-up Group G,Paraguay,Iran,0.5901729424704881,Paraguay,Iran,2026-07-03T18:00:00Z,AT&T Stadium,Dallas
+87,Round of 32,Winner Group J,Runner-up Group H,Argentina,Uruguay,0.7123749785308289,Argentina,Uruguay,2026-07-03T22:00:00Z,Hard Rock Stadium,Miami
+88,Round of 32,Winner Group K,Best 3rd (Groups D/E/I/J/L),Portugal,Brazil,0.5192978002801787,Portugal,Brazil,2026-07-04T01:30:00Z,GEHA Field at Arrowhead Stadium,Kansas City
+89,Round of 16,Winner Match 73,Winner Match 75,Switzerland,South Africa,0.8778631253450271,Switzerland,South Africa,2026-07-04T17:00:00Z,NRG Stadium,Houston
+90,Round of 16,Winner Match 74,Winner Match 77,Japan,Norway,0.480865502870768,Japan,Norway,2026-07-04T21:00:00Z,Lincoln Financial Field,Philadelphia
+91,Round of 16,Winner Match 76,Winner Match 78,Netherlands,France,0.24491010988004291,France,Netherlands,2026-07-05T20:00:00Z,MetLife Stadium,East Rutherford
+92,Round of 16,Winner Match 79,Winner Match 80,Côte d'Ivoire,England,0.2316487210974375,England,Côte d'Ivoire,2026-07-06T00:00:00Z,Estadio Azteca,Mexico City
+93,Round of 16,Winner Match 83,Winner Match 84,Colombia,Spain,0.15323619330165048,Spain,Colombia,2026-07-06T19:00:00Z,AT&T Stadium,Dallas
+94,Round of 16,Winner Match 81,Winner Match 82,Belgium,Egypt,0.6339809796457414,Egypt,Belgium,2026-07-07T00:00:00Z,Lumen Field,Seattle
+95,Round of 16,Winner Match 86,Winner Match 88,Paraguay,Portugal,0.2709547110403483,Paraguay,Portugal,2026-07-07T16:00:00Z,Mercedes-Benz Stadium,Atlanta
+96,Round of 16,Winner Match 85,Winner Match 87,Canada,Argentina,0.17750754131032861,Argentina,Canada,2026-07-07T20:00:00Z,BC Place,Vancouver
+97,Quarter-final,Winner Match 89,Winner Match 90,Switzerland,Japan,0.504399699463945,Switzerland,Japan,2026-07-09T20:00:00Z,Gillette Stadium,Boston
+98,Quarter-final,Winner Match 93,Winner Match 94,Spain,Egypt,0.9194859320852623,Spain,Egypt,2026-07-10T19:00:00Z,SoFi Stadium,Los Angeles
+99,Quarter-final,Winner Match 91,Winner Match 92,France,England,0.617194026509378,France,England,2026-07-11T21:00:00Z,Hard Rock Stadium,Miami
+100,Quarter-final,Winner Match 95,Winner Match 96,Paraguay,Argentina,0.2227643967778371,Argentina,Paraguay,2026-07-12T01:00:00Z,GEHA Field at Arrowhead Stadium,Kansas City
+101,Semi-final,Winner Match 97,Winner Match 98,Switzerland,Spain,0.13393507432957233,Spain,Switzerland,2026-07-14T19:00:00Z,AT&T Stadium,Dallas
+102,Semi-final,Winner Match 99,Winner Match 100,France,Argentina,0.5543874186964667,France,Argentina,2026-07-15T19:00:00Z,Mercedes-Benz Stadium,Atlanta
+103,Third-place playoff,Loser Match 101,Loser Match 102,Switzerland,Argentina,0.30508319494897235,Argentina,Switzerland,2026-07-18T21:00:00Z,Hard Rock Stadium,Miami
+104,Final,Winner Match 101,Winner Match 102,Spain,France,0.6952931228173554,Spain,France,2026-07-19T19:00:00Z,MetLife Stadium,East Rutherford

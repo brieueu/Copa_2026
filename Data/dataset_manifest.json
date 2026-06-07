@@ -1,0 +1,114 @@
+[
+  {
+    "label": "fc26",
+    "dataset": "justdhia/ea-sports-fc-26-player-ratings",
+    "local_path": "/home/gabriel/Projetos /Vencedor_copa/Data/raw/kaggle/justdhia__ea-sports-fc-26-player-ratings",
+    "files": [
+      {
+        "path": "ea_fc26_goalkeepers.csv",
+        "size": 236199
+      },
+      {
+        "path": "ea_fc26_outfield.csv",
+        "size": 3312023
+      },
+      {
+        "path": "ea_fc26_players.csv",
+        "size": 4061959
+      }
+    ]
+  },
+  {
+    "label": "elo",
+    "dataset": "afonsofernandescruz/2026-fifa-world-cup-historical-elo-ratings",
+    "local_path": "/home/gabriel/Projetos /Vencedor_copa/Data/raw/kaggle/afonsofernandescruz__2026-fifa-world-cup-historical-elo-ratings",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 10638
+      },
+      {
+        "path": "elo_ratings_wc2026.csv",
+        "size": 461620
+      }
+    ]
+  },
+  {
+    "label": "fc25",
+    "dataset": "samandarabdujabbar/ea-sports-fc-25-complete-player-stats-and-analysis",
+    "local_path": "/home/gabriel/Projetos /Vencedor_copa/Data/raw/kaggle/samandarabdujabbar__ea-sports-fc-25-complete-player-stats-and-analysis",
+    "files": [
+      {
+        "path": "ea_sports_fc25_full.csv",
+        "size": 1072380
+      }
+    ]
+  },
+  {
+    "label": "wc2026",
+    "dataset": "pranishkessi/fifa-world-cup-2026-prediction-simulator",
+    "local_path": "/home/gabriel/Projetos /Vencedor_copa/Data/raw/kaggle/pranishkessi__fifa-world-cup-2026-prediction-simulator",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 15528
+      },
+      {
+        "path": "data/processed/matches_with_elo_fifa_form_confed_exp_h2h.csv",
+        "size": 36262626
+      },
+      {
+        "path": "data/worldcup_2026/README_model_v5_fixtures.md",
+        "size": 2133
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_champion_distribution.csv",
+        "size": 818
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_group_finish_probabilities.csv",
+        "size": 2523
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_group_match_probabilities.csv",
+        "size": 10581
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_knockout_matchup_probabilities.csv",
+        "size": 678595
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_sample_simulated_matches_first_200_runs.csv",
+        "size": 857278
+      },
+      {
+        "path": "data/worldcup_2026/model_v5_team_probabilities.csv",
+        "size": 6679
+      },
+      {
+        "path": "data/worldcup_2026/worldcup_2026_all_fixtures.csv",
+        "size": 25934
+      },
+      {
+        "path": "data/worldcup_2026/worldcup_2026_group_fixtures.csv",
+        "size": 15479
+      },
+      {
+        "path": "data/worldcup_2026/worldcup_2026_groups.csv",
+        "size": 1257
+      },
+      {
+        "path": "data/worldcup_2026/worldcup_2026_knockout_slots.csv",
+        "size": 8045
+      },
+      {
+        "path": "models/v4_probability_ensemble.joblib",
+        "size": 266
+      },
+      {
+        "path": "requirements.txt",
+        "size": 64
+      }
+    ]
+  }
+]
