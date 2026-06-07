@@ -37,16 +37,6 @@ O modelo estima:
 
 ## Resultados principais
 
-### Animação das probabilidades de título
-
-<p align="center">
-  <img src="outputs/professional_champion_probability_animation.gif" alt="Animação das probabilidades de título da Copa 2026" width="950">
-</p>
-
-A animação resume o ranking final de chances de título após `100.000` torneios simulados.
-
----
-
 ### Ranking de probabilidade de título
 
 <p align="center">
@@ -157,7 +147,6 @@ Mais detalhes sobre os dados estão em `Data/README.md`.
 | `tools/build_copa_2026_data_pipeline.py` | Script de construção da base processada |
 | `tools/update_vencedor_copa_notebook.py` | Script para atualizar notebook e outputs finais |
 | `tools/create_professional_readme_charts.py` | Script que gera os gráficos profissionais do README |
-| `tools/create_animated_champion_chart.py` | Script que gera a animação em GIF do ranking de título |
 | `tools/run_fast_100k_simulation.py` | Script otimizado para rodar 100.000 simulações |
 | `Data/processed/copa_2026_master_team_dataset.csv` | Base consolidada por seleção |
 | `outputs/updated_2026_probabilities.csv` | Probabilidades finais por seleção |
@@ -184,7 +173,7 @@ source .venv/bin/activate
 Instale as dependências principais:
 
 ```bash
-pip install pandas numpy matplotlib pillow openpyxl pytest
+pip install pandas numpy matplotlib openpyxl pytest
 ```
 
 Execute os testes:
@@ -203,7 +192,6 @@ Regere os gráficos profissionais do README:
 
 ```bash
 python tools/create_professional_readme_charts.py
-python tools/create_animated_champion_chart.py
 ```
 
 ---
