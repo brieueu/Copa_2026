@@ -1,0 +1,15 @@
+# Ambientes locais
+.venv/
+venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Sistema/editor
+.DS_Store
+.vscode/
+.idea/
