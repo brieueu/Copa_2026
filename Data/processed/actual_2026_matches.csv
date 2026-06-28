@@ -1,0 +1,105 @@
+match_id,date,time,round,group,stage_type,home_team,away_team,home_score,away_score,city,stadium,host_country,neutral_for_model,has_result
+1,2026-06-11,13:00 UTC-6,Matchday 1,Group A,group,Mexico,South Africa,2.0,0.0,Mexico City,,Mexico,False,True
+2,2026-06-11,20:00 UTC-6,Matchday 1,Group A,group,South Korea,Czech Republic,2.0,1.0,Guadalajara (Zapopan),,Mexico,True,True
+3,2026-06-18,12:00 UTC-4,Matchday 8,Group A,group,Czech Republic,South Africa,1.0,1.0,Atlanta,,United States,True,True
+4,2026-06-18,19:00 UTC-6,Matchday 8,Group A,group,Mexico,South Korea,1.0,0.0,Guadalajara (Zapopan),,Mexico,False,True
+5,2026-06-24,19:00 UTC-6,Matchday 14,Group A,group,Czech Republic,Mexico,0.0,3.0,Mexico City,,Mexico,False,True
+6,2026-06-24,19:00 UTC-6,Matchday 14,Group A,group,South Africa,South Korea,1.0,0.0,Monterrey (Guadalupe),,Mexico,True,True
+7,2026-06-12,15:00 UTC-4,Matchday 2,Group B,group,Canada,Bosnia and Herzegovina,1.0,1.0,Toronto,,Canada,False,True
+8,2026-06-13,12:00 UTC-7,Matchday 3,Group B,group,Qatar,Switzerland,1.0,1.0,San Francisco Bay Area (Santa Clara),,United States,True,True
+9,2026-06-18,12:00 UTC-7,Matchday 8,Group B,group,Switzerland,Bosnia and Herzegovina,4.0,1.0,Los Angeles (Inglewood),,United States,True,True
+10,2026-06-18,15:00 UTC-7,Matchday 8,Group B,group,Canada,Qatar,6.0,0.0,Vancouver,,Canada,False,True
+11,2026-06-24,12:00 UTC-7,Matchday 14,Group B,group,Switzerland,Canada,2.0,1.0,Vancouver,,Canada,False,True
+12,2026-06-24,12:00 UTC-7,Matchday 14,Group B,group,Bosnia and Herzegovina,Qatar,3.0,1.0,Seattle,,United States,True,True
+13,2026-06-13,18:00 UTC-4,Matchday 3,Group C,group,Brazil,Morocco,1.0,1.0,New York/New Jersey (East Rutherford),,,True,True
+14,2026-06-13,21:00 UTC-4,Matchday 3,Group C,group,Haiti,Scotland,0.0,1.0,Boston (Foxborough),,United States,True,True
+15,2026-06-19,18:00 UTC-4,Matchday 9,Group C,group,Scotland,Morocco,0.0,1.0,Boston (Foxborough),,United States,True,True
+16,2026-06-19,20:30 UTC-4,Matchday 9,Group C,group,Brazil,Haiti,3.0,0.0,Philadelphia,,United States,True,True
+17,2026-06-24,18:00 UTC-4,Matchday 14,Group C,group,Scotland,Brazil,0.0,3.0,Miami (Miami Gardens),,,True,True
+18,2026-06-24,18:00 UTC-4,Matchday 14,Group C,group,Morocco,Haiti,4.0,2.0,Atlanta,,United States,True,True
+19,2026-06-12,18:00 UTC-7,Matchday 2,Group D,group,United States,Paraguay,4.0,1.0,Los Angeles (Inglewood),,United States,False,True
+20,2026-06-13,21:00 UTC-7,Matchday 3,Group D,group,Australia,Turkey,2.0,0.0,Vancouver,,Canada,True,True
+21,2026-06-19,12:00 UTC-7,Matchday 9,Group D,group,United States,Australia,2.0,0.0,Seattle,,United States,False,True
+22,2026-06-19,20:00 UTC-7,Matchday 9,Group D,group,Turkey,Paraguay,0.0,1.0,San Francisco Bay Area (Santa Clara),,United States,True,True
+23,2026-06-25,19:00 UTC-7,Matchday 15,Group D,group,Turkey,United States,3.0,2.0,Los Angeles (Inglewood),,United States,False,True
+24,2026-06-25,19:00 UTC-7,Matchday 15,Group D,group,Paraguay,Australia,0.0,0.0,San Francisco Bay Area (Santa Clara),,United States,True,True
+25,2026-06-14,12:00 UTC-5,Matchday 4,Group E,group,Germany,Curacao,7.0,1.0,Houston,,United States,True,True
+26,2026-06-14,19:00 UTC-4,Matchday 4,Group E,group,Côte d'Ivoire,Ecuador,1.0,0.0,Philadelphia,,United States,True,True
+27,2026-06-20,16:00 UTC-4,Matchday 10,Group E,group,Germany,Côte d'Ivoire,2.0,1.0,Toronto,,Canada,True,True
+28,2026-06-20,19:00 UTC-5,Matchday 10,Group E,group,Ecuador,Curacao,0.0,0.0,Kansas City,,United States,True,True
+29,2026-06-25,16:00 UTC-4,Matchday 15,Group E,group,Curacao,Côte d'Ivoire,0.0,2.0,Philadelphia,,United States,True,True
+30,2026-06-25,16:00 UTC-4,Matchday 15,Group E,group,Ecuador,Germany,2.0,1.0,New York/New Jersey (East Rutherford),,,True,True
+31,2026-06-14,15:00 UTC-5,Matchday 4,Group F,group,Netherlands,Japan,2.0,2.0,Dallas (Arlington),,United States,True,True
+32,2026-06-14,20:00 UTC-6,Matchday 4,Group F,group,Sweden,Tunisia,5.0,1.0,Monterrey (Guadalupe),,Mexico,True,True
+33,2026-06-20,12:00 UTC-5,Matchday 10,Group F,group,Netherlands,Sweden,5.0,1.0,Houston,,United States,True,True
+34,2026-06-20,22:00 UTC-6,Matchday 10,Group F,group,Tunisia,Japan,0.0,4.0,Monterrey (Guadalupe),,Mexico,True,True
+35,2026-06-25,18:00 UTC-5,Matchday 15,Group F,group,Japan,Sweden,1.0,1.0,Dallas (Arlington),,United States,True,True
+36,2026-06-25,18:00 UTC-5,Matchday 15,Group F,group,Tunisia,Netherlands,1.0,3.0,Kansas City,,United States,True,True
+37,2026-06-15,12:00 UTC-7,Matchday 5,Group G,group,Belgium,Egypt,1.0,1.0,Seattle,,United States,True,True
+38,2026-06-15,18:00 UTC-7,Matchday 5,Group G,group,Iran,New Zealand,2.0,2.0,Los Angeles (Inglewood),,United States,True,True
+39,2026-06-21,12:00 UTC-7,Matchday 11,Group G,group,Belgium,Iran,0.0,0.0,Los Angeles (Inglewood),,United States,True,True
+40,2026-06-21,18:00 UTC-7,Matchday 11,Group G,group,New Zealand,Egypt,1.0,3.0,Vancouver,,Canada,True,True
+41,2026-06-26,20:00 UTC-7,Matchday 16,Group G,group,Egypt,Iran,1.0,1.0,Seattle,,United States,True,True
+42,2026-06-26,20:00 UTC-7,Matchday 16,Group G,group,New Zealand,Belgium,1.0,5.0,Vancouver,,Canada,True,True
+43,2026-06-15,12:00 UTC-4,Matchday 5,Group H,group,Spain,Cabo Verde,0.0,0.0,Atlanta,,United States,True,True
+44,2026-06-15,18:00 UTC-4,Matchday 5,Group H,group,Saudi Arabia,Uruguay,1.0,1.0,Miami (Miami Gardens),,,True,True
+45,2026-06-21,12:00 UTC-4,Matchday 11,Group H,group,Spain,Saudi Arabia,4.0,0.0,Atlanta,,United States,True,True
+46,2026-06-21,18:00 UTC-4,Matchday 11,Group H,group,Uruguay,Cabo Verde,2.0,2.0,Miami (Miami Gardens),,,True,True
+47,2026-06-26,19:00 UTC-5,Matchday 16,Group H,group,Cabo Verde,Saudi Arabia,0.0,0.0,Houston,,United States,True,True
+48,2026-06-26,18:00 UTC-6,Matchday 16,Group H,group,Uruguay,Spain,0.0,1.0,Guadalajara (Zapopan),,Mexico,True,True
+49,2026-06-16,15:00 UTC-4,Matchday 6,Group I,group,France,Senegal,3.0,1.0,New York/New Jersey (East Rutherford),,,True,True
+50,2026-06-16,18:00 UTC-4,Matchday 6,Group I,group,Iraq,Norway,1.0,4.0,Boston (Foxborough),,United States,True,True
+51,2026-06-22,17:00 UTC-4,Matchday 12,Group I,group,France,Iraq,3.0,0.0,Philadelphia,,United States,True,True
+52,2026-06-22,20:00 UTC-4,Matchday 12,Group I,group,Norway,Senegal,3.0,2.0,New York/New Jersey (East Rutherford),,,True,True
+53,2026-06-26,15:00 UTC-4,Matchday 16,Group I,group,Norway,France,1.0,4.0,Boston (Foxborough),,United States,True,True
+54,2026-06-26,15:00 UTC-4,Matchday 16,Group I,group,Senegal,Iraq,5.0,0.0,Toronto,,Canada,True,True
+55,2026-06-16,20:00 UTC-5,Matchday 6,Group J,group,Argentina,Algeria,3.0,0.0,Kansas City,,United States,True,True
+56,2026-06-16,21:00 UTC-7,Matchday 6,Group J,group,Austria,Jordan,3.0,1.0,San Francisco Bay Area (Santa Clara),,United States,True,True
+57,2026-06-22,12:00 UTC-5,Matchday 12,Group J,group,Argentina,Austria,2.0,0.0,Dallas (Arlington),,United States,True,True
+58,2026-06-22,20:00 UTC-7,Matchday 12,Group J,group,Jordan,Algeria,1.0,2.0,San Francisco Bay Area (Santa Clara),,United States,True,True
+59,2026-06-27,21:00 UTC-5,Matchday 17,Group J,group,Algeria,Austria,3.0,3.0,Kansas City,,United States,True,True
+60,2026-06-27,21:00 UTC-5,Matchday 17,Group J,group,Jordan,Argentina,1.0,3.0,Dallas (Arlington),,United States,True,True
+61,2026-06-17,12:00 UTC-5,Matchday 7,Group K,group,Portugal,Congo DR,1.0,1.0,Houston,,United States,True,True
+62,2026-06-17,20:00 UTC-6,Matchday 7,Group K,group,Uzbekistan,Colombia,1.0,3.0,Mexico City,,Mexico,True,True
+63,2026-06-23,12:00 UTC-5,Matchday 13,Group K,group,Portugal,Uzbekistan,5.0,0.0,Houston,,United States,True,True
+64,2026-06-23,20:00 UTC-6,Matchday 13,Group K,group,Colombia,Congo DR,1.0,0.0,Guadalajara (Zapopan),,Mexico,True,True
+65,2026-06-27,19:30 UTC-4,Matchday 17,Group K,group,Colombia,Portugal,0.0,0.0,Miami (Miami Gardens),,,True,True
+66,2026-06-27,19:30 UTC-4,Matchday 17,Group K,group,Congo DR,Uzbekistan,3.0,1.0,Atlanta,,United States,True,True
+67,2026-06-17,15:00 UTC-5,Matchday 7,Group L,group,England,Croatia,4.0,2.0,Dallas (Arlington),,United States,True,True
+68,2026-06-17,19:00 UTC-4,Matchday 7,Group L,group,Ghana,Panama,1.0,0.0,Toronto,,Canada,True,True
+69,2026-06-23,16:00 UTC-4,Matchday 13,Group L,group,England,Ghana,0.0,0.0,Boston (Foxborough),,United States,True,True
+70,2026-06-23,19:00 UTC-4,Matchday 13,Group L,group,Panama,Croatia,0.0,1.0,Toronto,,Canada,True,True
+71,2026-06-27,17:00 UTC-4,Matchday 17,Group L,group,Panama,England,0.0,2.0,New York/New Jersey (East Rutherford),,,True,True
+72,2026-06-27,17:00 UTC-4,Matchday 17,Group L,group,Croatia,Ghana,2.0,1.0,Philadelphia,,United States,True,True
+73,2026-06-28,12:00 UTC-7,Round of 32,,knockout,South Africa,Canada,,,Los Angeles (Inglewood),,United States,True,False
+74,2026-06-29,16:30 UTC-4,Round of 32,,knockout,Germany,Paraguay,,,Boston (Foxborough),,United States,True,False
+75,2026-06-29,19:00 UTC-6,Round of 32,,knockout,Netherlands,Morocco,,,Monterrey (Guadalupe),,Mexico,True,False
+76,2026-06-29,12:00 UTC-5,Round of 32,,knockout,Brazil,Japan,,,Houston,,United States,True,False
+77,2026-06-30,17:00 UTC-4,Round of 32,,knockout,France,Sweden,,,New York/New Jersey (East Rutherford),,,True,False
+78,2026-06-30,12:00 UTC-5,Round of 32,,knockout,Côte d'Ivoire,Norway,,,Dallas (Arlington),,United States,True,False
+79,2026-06-30,19:00 UTC-6,Round of 32,,knockout,Mexico,Ecuador,,,Mexico City,,Mexico,False,False
+80,2026-07-01,12:00 UTC-4,Round of 32,,knockout,England,Congo DR,,,Atlanta,,United States,True,False
+81,2026-07-01,17:00 UTC-7,Round of 32,,knockout,United States,Bosnia and Herzegovina,,,San Francisco Bay Area (Santa Clara),,United States,False,False
+82,2026-07-01,13:00 UTC-7,Round of 32,,knockout,Belgium,Senegal,,,Seattle,,United States,True,False
+83,2026-07-02,19:00 UTC-4,Round of 32,,knockout,Portugal,Croatia,,,Toronto,,Canada,True,False
+84,2026-07-02,12:00 UTC-7,Round of 32,,knockout,Spain,Austria,,,Los Angeles (Inglewood),,United States,True,False
+85,2026-07-02,20:00 UTC-7,Round of 32,,knockout,Switzerland,Algeria,,,Vancouver,,Canada,True,False
+86,2026-07-03,18:00 UTC-4,Round of 32,,knockout,Argentina,Cabo Verde,,,Miami (Miami Gardens),,,True,False
+87,2026-07-03,20:30 UTC-5,Round of 32,,knockout,Colombia,Ghana,,,Kansas City,,United States,True,False
+88,2026-07-03,13:00 UTC-5,Round of 32,,knockout,Australia,Egypt,,,Dallas (Arlington),,United States,True,False
+89,2026-07-04,17:00 UTC-4,Round of 16,,knockout,W74,W77,,,Philadelphia,,United States,True,False
+90,2026-07-04,12:00 UTC-5,Round of 16,,knockout,W73,W75,,,Houston,,United States,True,False
+91,2026-07-05,16:00 UTC-4,Round of 16,,knockout,W76,W78,,,New York/New Jersey (East Rutherford),,,True,False
+92,2026-07-05,18:00 UTC-6,Round of 16,,knockout,W79,W80,,,Mexico City,,Mexico,True,False
+93,2026-07-06,14:00 UTC-5,Round of 16,,knockout,W83,W84,,,Dallas (Arlington),,United States,True,False
+94,2026-07-06,17:00 UTC-7,Round of 16,,knockout,W81,W82,,,Seattle,,United States,True,False
+95,2026-07-07,12:00 UTC-4,Round of 16,,knockout,W86,W88,,,Atlanta,,United States,True,False
+96,2026-07-07,13:00 UTC-7,Round of 16,,knockout,W85,W87,,,Vancouver,,Canada,True,False
+97,2026-07-09,16:00 UTC-4,Quarter-final,,knockout,W89,W90,,,Boston (Foxborough),,United States,True,False
+98,2026-07-10,12:00 UTC-7,Quarter-final,,knockout,W93,W94,,,Los Angeles (Inglewood),,United States,True,False
+99,2026-07-11,17:00 UTC-4,Quarter-final,,knockout,W91,W92,,,Miami (Miami Gardens),,,True,False
+100,2026-07-11,20:00 UTC-5,Quarter-final,,knockout,W95,W96,,,Kansas City,,United States,True,False
+101,2026-07-14,14:00 UTC-5,Semi-final,,knockout,W97,W98,,,Dallas (Arlington),,United States,True,False
+102,2026-07-15,15:00 UTC-4,Semi-final,,knockout,W99,W100,,,Atlanta,,United States,True,False
+103,2026-07-18,17:00 UTC-4,Match for third place,,knockout,L101,L102,,,Miami (Miami Gardens),,,True,False
+104,2026-07-19,15:00 UTC-4,Final,,knockout,W101,W102,,,New York/New Jersey (East Rutherford),,,True,False
