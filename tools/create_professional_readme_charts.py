@@ -101,18 +101,6 @@ def add_background(fig: Figure) -> None:
     fig.patches.append(card)
 
 
-def add_footer(fig: Figure) -> None:
-    fig.text(
-        0.982,
-        0.02,
-        "Fonte: datasets Kaggle + simulação Monte Carlo | Seed 42 | Copa 2026",
-        ha="right",
-        va="bottom",
-        fontsize=9,
-        color=to_rgba(MUTED, 0.88),
-    )
-
-
 def title_bar(ax: Axes, title: str, subtitle: str | None = None) -> None:
     ax.text(
         0,
@@ -188,7 +176,6 @@ def make_title_ranking(probs: pd.DataFrame) -> None:
     ax.set_ylabel("")
     ax.set_xlim(0, values.max() * 1.25)
     style_axes(ax, xgrid=True)
-    add_footer(fig)
     save(fig, "professional_champion_ranking.png")
 
 
@@ -241,7 +228,6 @@ def make_phase_heatmap(probs: pd.DataFrame) -> None:
     ax.tick_params(axis="y", rotation=0, labelsize=10)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    add_footer(fig)
     save(fig, "professional_phase_heatmap.png")
 
 
@@ -280,7 +266,6 @@ def make_funnel(probs: pd.DataFrame) -> None:
     ax.set_ylim(0, 105)
     style_axes(ax, xgrid=False, ygrid=True)
     ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.5, -0.18), frameon=True, fontsize=10)
-    add_footer(fig)
     save(fig, "professional_favorites_funnel.png")
 
 
@@ -319,7 +304,6 @@ def make_bracket_strength(bracket: pd.DataFrame) -> None:
     )
     ax.legend(loc="lower right", frameon=True)
     style_axes(ax, xgrid=True)
-    add_footer(fig)
     save(fig, "professional_round32_balance.png")
 
 
