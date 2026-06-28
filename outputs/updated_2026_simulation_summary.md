@@ -1,40 +1,56 @@
-# Simulação probabilística Copa 2026
+# Simulação probabilística Copa 2026 — v0.2.0
 
 Simulações: 100000
 Seed: 42
 Seleções: 48
-Formato: 48 seleções, 12 grupos de 4, 32 no mata-mata.
+Modelo: Monte Carlo com força composta v0.2.0, Elo dinâmico pós-fase de grupos, forma recente, sede/local e pênaltis explícitos.
 
 ## Top 10 favoritos
 
-       team  champion_probability  final_probability  semi_final_probability
-      Spain               0.22377            0.33280                 0.48605
-     France               0.21084            0.32893                 0.48121
-    Germany               0.13237            0.23788                 0.41455
-   Portugal               0.07987            0.16428                 0.31196
-  Argentina               0.06719            0.13949                 0.26051
-     Brazil               0.06354            0.13231                 0.25191
-    England               0.05740            0.12360                 0.23194
-    Croatia               0.02443            0.06396                 0.14279
-Switzerland               0.02202            0.06089                 0.15257
-    Belgium               0.02167            0.05858                 0.14594
+       team  champion_probability  final_probability  semi_final_probability  dynamic_elo_rating
+      Spain               0.19751            0.30910                 0.43578         2150.273148
+     France               0.17299            0.27308                 0.42754         2137.982189
+  Argentina               0.16317            0.26477                 0.40935         2144.666033
+    Germany               0.06718            0.14096                 0.28328         1907.070710
+    England               0.06684            0.13356                 0.24236         2037.075779
+     Brazil               0.06192            0.12589                 0.24675         2000.881246
+   Portugal               0.05740            0.11899                 0.22841         1986.007494
+    Belgium               0.03407            0.08269                 0.16918         1862.903179
+   Colombia               0.02728            0.06767                 0.14748         1999.417742
+Switzerland               0.01664            0.04629                 0.12021         1912.401258
 
-## Round of 32 da primeira simulação
+## Mata-mata da primeira simulação
 
- match_id   team_home     team_away most_likely_winner simulated_winner
-       73      Mexico        Canada             Canada           Mexico
-       74      Brazil        Sweden             Brazil           Brazil
-       75     Germany  South Africa            Germany          Germany
-       76       Japan      Scotland              Japan         Scotland
-       77     Ecuador          Iraq            Ecuador             Iraq
-       78     Senegal      Paraguay            Senegal          Senegal
-       79 South Korea Côte d'Ivoire        South Korea    Côte d'Ivoire
-       80     Croatia      DR Congo            Croatia          Croatia
-       81       Egypt     Argentina          Argentina        Argentina
-       82      Turkey         Qatar             Turkey           Turkey
-       83    Portugal       England           Portugal          England
-       84       Spain       Algeria              Spain            Spain
-       85 Switzerland         Ghana        Switzerland            Ghana
-       86         USA          Iran                USA             Iran
-       87     Austria  Saudi Arabia            Austria          Austria
-       88    Colombia       Uruguay           Colombia          Uruguay
+ match_id              team_home    team_away        knockout_resolution  won_by_penalties simulated_winner
+       73           South Africa  Switzerland regular_time_or_extra_time             False      Switzerland
+       74                Morocco       Sweden regular_time_or_extra_time             False           Sweden
+       75          Côte d'Ivoire  South Korea                  penalties              True      South Korea
+       76                  Japan       Brazil regular_time_or_extra_time             False           Brazil
+       77                Germany      Senegal regular_time_or_extra_time             False          Germany
+       78                 France      Uruguay regular_time_or_extra_time             False           France
+       79                 Mexico       Norway regular_time_or_extra_time             False           Mexico
+       80                Croatia       Jordan regular_time_or_extra_time             False          Croatia
+       81                  Egypt      Ecuador regular_time_or_extra_time             False            Egypt
+       82                 Turkey       Canada regular_time_or_extra_time             False           Turkey
+       83               Portugal        Ghana regular_time_or_extra_time             False         Portugal
+       84                  Spain      Austria regular_time_or_extra_time             False            Spain
+       85 Bosnia and Herzegovina       Panama                  penalties              True           Panama
+       86          United States      Belgium                  penalties              True    United States
+       87              Argentina Saudi Arabia regular_time_or_extra_time             False        Argentina
+       88               Colombia     Congo DR regular_time_or_extra_time             False         Colombia
+       89            Switzerland  South Korea regular_time_or_extra_time             False      Switzerland
+       90                 Sweden      Germany regular_time_or_extra_time             False           Sweden
+       91                 Brazil       France                  penalties              True           France
+       92                 Mexico      Croatia regular_time_or_extra_time             False           Mexico
+       93               Portugal        Spain regular_time_or_extra_time             False            Spain
+       94                  Egypt       Turkey                  penalties              True           Turkey
+       95          United States     Colombia                  penalties              True         Colombia
+       96                 Panama    Argentina regular_time_or_extra_time             False        Argentina
+       97            Switzerland       Sweden regular_time_or_extra_time             False      Switzerland
+       98                  Spain       Turkey regular_time_or_extra_time             False            Spain
+       99                 France       Mexico                  penalties              True           France
+      100               Colombia    Argentina                  penalties              True        Argentina
+      101            Switzerland        Spain regular_time_or_extra_time             False            Spain
+      102                 France    Argentina regular_time_or_extra_time             False           France
+      103            Switzerland    Argentina regular_time_or_extra_time             False        Argentina
+      104                  Spain       France regular_time_or_extra_time             False           France

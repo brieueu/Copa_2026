@@ -1,33 +1,33 @@
-match_id,stage,slot_home,slot_away,team_home,team_away,p_home_win,p_away_win,most_likely_winner,simulated_winner,simulated_loser
-73,Round of 32,Runner-up Group A,Runner-up Group B,Mexico,Canada,0.4281101787152014,0.5718898212847986,Canada,Mexico,Canada
-74,Round of 32,Winner Group C,Runner-up Group F,Brazil,Sweden,0.7940255538909424,0.20597444610905757,Brazil,Brazil,Sweden
-75,Round of 32,Winner Group E,Best 3rd (Groups A/B/C/D/F),Germany,South Africa,0.9812486635768575,0.01875133642314253,Germany,Germany,South Africa
-76,Round of 32,Winner Group F,Runner-up Group C,Japan,Scotland,0.6628846921270221,0.33711530787297794,Japan,Scotland,Japan
-77,Round of 32,Runner-up Group E,Runner-up Group I,Ecuador,Iraq,0.8506113745217998,0.1493886254782002,Ecuador,Iraq,Ecuador
-78,Round of 32,Winner Group I,Best 3rd (Groups C/D/F/G/H),Senegal,Paraguay,0.6496139667287247,0.35038603327127527,Senegal,Senegal,Paraguay
-79,Round of 32,Winner Group A,Best 3rd (Groups C/E/F/H/I),South Korea,Côte d'Ivoire,0.5486855316282389,0.45131446837176115,South Korea,Côte d'Ivoire,South Korea
-80,Round of 32,Winner Group L,Best 3rd (Groups E/H/I/J/K),Croatia,DR Congo,0.8217431695968536,0.17825683040314644,Croatia,Croatia,DR Congo
-81,Round of 32,Winner Group G,Best 3rd (Groups A/E/H/I/J),Egypt,Argentina,0.16394697460179009,0.8360530253982099,Argentina,Argentina,Egypt
-82,Round of 32,Winner Group D,Best 3rd (Groups B/E/F/I/J),Turkey,Qatar,0.8227746003770228,0.17722539962297723,Turkey,Turkey,Qatar
-83,Round of 32,Runner-up Group K,Runner-up Group L,Portugal,England,0.5240388801989107,0.47596111980108935,Portugal,England,Portugal
-84,Round of 32,Winner Group H,Runner-up Group J,Spain,Algeria,0.8570506128770973,0.14294938712290273,Spain,Spain,Algeria
-85,Round of 32,Winner Group B,Best 3rd (Groups E/F/G/I/J),Switzerland,Ghana,0.8499525750789949,0.1500474249210051,Switzerland,Ghana,Switzerland
-86,Round of 32,Runner-up Group D,Runner-up Group G,USA,Iran,0.7579626470236728,0.24203735297632722,USA,Iran,USA
-87,Round of 32,Winner Group J,Runner-up Group H,Austria,Saudi Arabia,0.804392033118854,0.195607966881146,Austria,Austria,Saudi Arabia
-88,Round of 32,Winner Group K,Best 3rd (Groups D/E/I/J/L),Colombia,Uruguay,0.5089717326140542,0.49102826738594585,Colombia,Uruguay,Colombia
-89,Round of 16,Winner Match 73,Winner Match 75,Mexico,Germany,0.0781475618213796,0.9218524381786204,Germany,Germany,Mexico
-90,Round of 16,Winner Match 74,Winner Match 77,Brazil,Iraq,0.9477059009970871,0.05229409900291293,Brazil,Brazil,Iraq
-91,Round of 16,Winner Match 76,Winner Match 78,Scotland,Senegal,0.3575913094522621,0.642408690547738,Senegal,Senegal,Scotland
-92,Round of 16,Winner Match 79,Winner Match 80,Côte d'Ivoire,Croatia,0.28807451624123154,0.7119254837587685,Croatia,Croatia,Côte d'Ivoire
-93,Round of 16,Winner Match 83,Winner Match 84,England,Spain,0.32408391472730413,0.6759160852726959,Spain,England,Spain
-94,Round of 16,Winner Match 81,Winner Match 82,Argentina,Turkey,0.7213202247387767,0.27867977526122334,Argentina,Argentina,Turkey
-95,Round of 16,Winner Match 86,Winner Match 88,Iran,Uruguay,0.2087117626442385,0.7912882373557615,Uruguay,Uruguay,Iran
-96,Round of 16,Winner Match 85,Winner Match 87,Ghana,Austria,0.22748032579458694,0.772519674205413,Austria,Austria,Ghana
-97,Quarter-final,Winner Match 89,Winner Match 90,Germany,Brazil,0.5702375794147709,0.42976242058522907,Germany,Brazil,Germany
-98,Quarter-final,Winner Match 93,Winner Match 94,England,Argentina,0.46906985240692783,0.5309301475930721,Argentina,England,Argentina
-99,Quarter-final,Winner Match 91,Winner Match 92,Senegal,Croatia,0.41899292742202293,0.581007072577977,Croatia,Senegal,Croatia
-100,Quarter-final,Winner Match 95,Winner Match 96,Uruguay,Austria,0.5741013585743351,0.4258986414256649,Uruguay,Uruguay,Austria
-101,Semi-final,Winner Match 97,Winner Match 98,Brazil,England,0.5214704214200385,0.4785295785799615,Brazil,Brazil,England
-102,Semi-final,Winner Match 99,Winner Match 100,Senegal,Uruguay,0.4960130535130956,0.5039869464869045,Uruguay,Senegal,Uruguay
-103,Third-place playoff,Loser Match 101,Loser Match 102,England,Uruguay,0.6715067490294835,0.3284932509705165,England,Uruguay,England
-104,Final,Winner Match 101,Winner Match 102,Brazil,Senegal,0.6935758659329464,0.3064241340670536,Brazil,Brazil,Senegal
+match_id,stage,slot_home,slot_away,team_home,team_away,host_country,stadium,city,p_home_win,p_away_win,p_penalty_home,p_penalty_away,p_draw_after_extra_time,knockout_resolution,won_by_penalties,most_likely_winner,simulated_winner,simulated_loser
+73,Round of 32,Runner-up Group A,Runner-up Group B,South Africa,Switzerland,United States,SoFi Stadium,Los Angeles,0.15879936883269147,0.8412006311673086,0.2307238341231605,0.7692761658768394,0.20375953145652748,regular_time_or_extra_time,False,Switzerland,Switzerland,South Africa
+74,Round of 32,Winner Group C,Runner-up Group F,Morocco,Sweden,United States,NRG Stadium,Houston,0.6938717399031794,0.3061282600968206,0.600853283919183,0.399146716080817,0.2210836149337085,regular_time_or_extra_time,False,Morocco,Sweden,Morocco
+75,Round of 32,Winner Group E,Best 3rd (Groups A/B/C/D/F),Côte d'Ivoire,South Korea,United States,Gillette Stadium,Boston,0.5544785847486365,0.44552141525136346,0.49803140125599854,0.5019685987440015,0.23422063919061412,penalties,True,Côte d'Ivoire,South Korea,Côte d'Ivoire
+76,Round of 32,Winner Group F,Runner-up Group C,Japan,Brazil,Mexico,Estadio BBVA,Monterrey,0.36503334060978226,0.6349666593902177,0.2922726135117159,0.707727386488284,0.23078973554212462,regular_time_or_extra_time,False,Brazil,Brazil,Japan
+77,Round of 32,Runner-up Group E,Runner-up Group I,Germany,Senegal,United States,AT&T Stadium,Dallas,0.677616332481234,0.322383667518766,0.682244525150757,0.31775547484924305,0.2252662927934712,regular_time_or_extra_time,False,Germany,Germany,Senegal
+78,Round of 32,Winner Group I,Best 3rd (Groups C/D/F/G/H),France,Uruguay,United States,MetLife Stadium,East Rutherford,0.8226710313114204,0.1773289686885796,0.7684650396975871,0.23153496030241294,0.20730100214953243,regular_time_or_extra_time,False,France,France,Uruguay
+79,Round of 32,Winner Group A,Best 3rd (Groups C/E/F/H/I),Mexico,Norway,Mexico,Estadio Azteca,Mexico City,0.4314898309605394,0.5685101690394606,0.39364566752108865,0.6063543324789114,0.2354316884330342,regular_time_or_extra_time,False,Norway,Mexico,Norway
+80,Round of 32,Winner Group L,Best 3rd (Groups E/H/I/J/K),Croatia,Jordan,United States,Mercedes-Benz Stadium,Atlanta,0.7853586865769425,0.21464131342305748,0.7565236221732808,0.24347637782671916,0.2131173989838587,regular_time_or_extra_time,False,Croatia,Croatia,Jordan
+81,Round of 32,Winner Group G,Best 3rd (Groups A/E/H/I/J),Egypt,Ecuador,United States,Lumen Field,Seattle,0.39992393752693267,0.6000760624730673,0.4320205146710746,0.5679794853289254,0.23107714526996398,regular_time_or_extra_time,False,Ecuador,Egypt,Ecuador
+82,Round of 32,Winner Group D,Best 3rd (Groups B/E/F/I/J),Turkey,Canada,United States,Levi's Stadium,Santa Clara,0.6689959701628454,0.3310040298371546,0.681950685916547,0.31804931408345305,0.22626823608995275,regular_time_or_extra_time,False,Turkey,Turkey,Canada
+83,Round of 32,Runner-up Group K,Runner-up Group L,Portugal,Ghana,Canada,BMO Field,Toronto,0.8924299739812891,0.10757002601871091,0.875987861170303,0.12401213882969697,0.19683021832735145,regular_time_or_extra_time,False,Portugal,Portugal,Ghana
+84,Round of 32,Winner Group H,Runner-up Group J,Spain,Austria,United States,SoFi Stadium,Los Angeles,0.8038723341575242,0.19612766584247576,0.8279085450633286,0.17209145493667144,0.2125997086128701,regular_time_or_extra_time,False,Spain,Spain,Austria
+85,Round of 32,Winner Group B,Best 3rd (Groups E/F/G/I/J),Bosnia and Herzegovina,Panama,Canada,BC Place,Vancouver,0.5193093805256227,0.4806906194743773,0.49557644895454334,0.5044235510454567,0.23786065574905615,penalties,True,Bosnia and Herzegovina,Panama,Bosnia and Herzegovina
+86,Round of 32,Runner-up Group D,Runner-up Group G,United States,Belgium,United States,AT&T Stadium,Dallas,0.3278601703609415,0.6721398296390585,0.2665643969691272,0.7334356030308729,0.2272566123889349,penalties,True,Belgium,United States,Belgium
+87,Round of 32,Winner Group J,Runner-up Group H,Argentina,Saudi Arabia,United States,Hard Rock Stadium,Miami,0.9317572399624146,0.06824276003758545,0.9064944761061062,0.09350552389389377,0.18583101725698575,regular_time_or_extra_time,False,Argentina,Argentina,Saudi Arabia
+88,Round of 32,Winner Group K,Best 3rd (Groups D/E/I/J/L),Colombia,Congo DR,United States,GEHA Field at Arrowhead Stadium,Kansas City,0.7583000019757912,0.24169999802420883,0.762845238055279,0.23715476194472096,0.21726979529228518,regular_time_or_extra_time,False,Colombia,Colombia,Congo DR
+89,Round of 16,Winner Match 73,Winner Match 75,Switzerland,South Korea,United States,NRG Stadium,Houston,0.6742611264768469,0.3257388735231531,0.6841104840570217,0.3158895159429783,0.2257104312207456,regular_time_or_extra_time,False,Switzerland,Switzerland,South Korea
+90,Round of 16,Winner Match 74,Winner Match 77,Sweden,Germany,United States,Lincoln Financial Field,Philadelphia,0.19991602424591537,0.8000839757540846,0.21387072117942496,0.786129278820575,0.21179142006952603,regular_time_or_extra_time,False,Germany,Sweden,Germany
+91,Round of 16,Winner Match 76,Winner Match 78,Brazil,France,United States,MetLife Stadium,East Rutherford,0.3764498920719936,0.6235501079280064,0.44094252671410056,0.5590574732858995,0.2282644182090514,penalties,True,France,France,Brazil
+92,Round of 16,Winner Match 79,Winner Match 80,Mexico,Croatia,Mexico,Estadio Azteca,Mexico City,0.4232753539537135,0.5767246460462865,0.3334064748911089,0.666593525108891,0.2360711627017053,regular_time_or_extra_time,False,Croatia,Mexico,Croatia
+93,Round of 16,Winner Match 83,Winner Match 84,Portugal,Spain,United States,AT&T Stadium,Dallas,0.3273738910808569,0.6726261089191431,0.34525626505134605,0.654743734948654,0.22512443784020678,regular_time_or_extra_time,False,Spain,Spain,Portugal
+94,Round of 16,Winner Match 81,Winner Match 82,Egypt,Turkey,United States,Lumen Field,Seattle,0.34966189633696304,0.6503381036630369,0.3607780513322096,0.6392219486677904,0.22730125782442234,penalties,True,Turkey,Turkey,Egypt
+95,Round of 16,Winner Match 86,Winner Match 88,United States,Colombia,United States,Mercedes-Benz Stadium,Atlanta,0.33976250168746774,0.6602374983125323,0.33461124593921926,0.6653887540607808,0.22684755221889555,penalties,True,Colombia,Colombia,United States
+96,Round of 16,Winner Match 85,Winner Match 87,Panama,Argentina,Canada,BC Place,Vancouver,0.07544162034430796,0.924558379655692,0.1311846380123432,0.8688153619876569,0.1859111578130693,regular_time_or_extra_time,False,Argentina,Argentina,Panama
+97,Quarter-final,Winner Match 89,Winner Match 90,Switzerland,Sweden,United States,Gillette Stadium,Boston,0.6974528779371946,0.30254712206280543,0.7180340654418677,0.28196593455813235,0.22385559398048702,regular_time_or_extra_time,False,Switzerland,Switzerland,Sweden
+98,Quarter-final,Winner Match 93,Winner Match 94,Spain,Turkey,United States,SoFi Stadium,Los Angeles,0.7794394856168694,0.22056051438313062,0.7357680162506196,0.2642319837493804,0.21334640895805204,regular_time_or_extra_time,False,Spain,Spain,Turkey
+99,Quarter-final,Winner Match 91,Winner Match 92,France,Mexico,United States,Hard Rock Stadium,Miami,0.8018008759526235,0.1981991240473765,0.8160424431515669,0.18395755684843307,0.21252848453812254,penalties,True,France,France,Mexico
+100,Quarter-final,Winner Match 95,Winner Match 96,Colombia,Argentina,United States,GEHA Field at Arrowhead Stadium,Kansas City,0.2972774969316615,0.7027225030683385,0.3127921452854147,0.6872078547145852,0.22236748665510525,penalties,True,Argentina,Argentina,Colombia
+101,Semi-final,Winner Match 97,Winner Match 98,Switzerland,Spain,United States,AT&T Stadium,Dallas,0.22511883337044583,0.7748811666295542,0.28920349962774966,0.7107965003722503,0.21322925585099725,regular_time_or_extra_time,False,Spain,Spain,Switzerland
+102,Semi-final,Winner Match 99,Winner Match 100,France,Argentina,United States,Mercedes-Benz Stadium,Atlanta,0.5054313208736774,0.49456867912632263,0.4804849915952429,0.5195150084047571,0.23893868420429426,regular_time_or_extra_time,False,France,France,Argentina
+103,Third-place playoff,Loser Match 101,Loser Match 102,Switzerland,Argentina,United States,Hard Rock Stadium,Miami,0.25237230288219425,0.7476276971178057,0.31151634680777907,0.6884836531922209,0.21650844807030847,regular_time_or_extra_time,False,Argentina,Argentina,Switzerland
+104,Final,Winner Match 101,Winner Match 102,Spain,France,United States,MetLife Stadium,East Rutherford,0.5320355054562965,0.4679644945437035,0.5459488735318279,0.45405112646817214,0.2377821235763945,regular_time_or_extra_time,False,Spain,France,Spain
