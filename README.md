@@ -44,7 +44,7 @@ O modelo estima:
 ### Ranking de probabilidade de título
 
 <p align="center">
-  <img src="outputs/professional_champion_ranking.png" alt="Ranking profissional de probabilidade de título" width="950">
+  <img src="outputs/professional_champion_ranking.png?v=20260628-nofonte" alt="Ranking profissional de probabilidade de título" width="950">
 </p>
 
 | Rank | Seleção | Título | Final | Semifinal |
@@ -65,7 +65,7 @@ O modelo estima:
 ### Progressão por fase
 
 <p align="center">
-  <img src="outputs/professional_phase_heatmap.png" alt="Heatmap profissional de progressão por fase" width="950">
+  <img src="outputs/professional_phase_heatmap.png?v=20260628-nofonte" alt="Heatmap profissional de progressão por fase" width="950">
 </p>
 
 O heatmap resume a probabilidade de cada seleção atingir as fases decisivas. Ele ajuda a separar seleções que têm alto potencial de título de seleções que são consistentes para avançar, mas perdem força nas rodadas finais.
@@ -75,7 +75,7 @@ O heatmap resume a probabilidade de cada seleção atingir as fases decisivas. E
 ### Funil dos favoritos
 
 <p align="center">
-  <img src="outputs/professional_favorites_funnel.png" alt="Funil profissional de sobrevivência dos favoritos" width="950">
+  <img src="outputs/professional_favorites_funnel.png?v=20260628-nofonte" alt="Funil profissional de sobrevivência dos favoritos" width="950">
 </p>
 
 O funil mostra como a probabilidade dos principais favoritos diminui à medida que o torneio avança. Essa visualização é útil para comparar risco acumulado entre seleções de elite.
@@ -85,7 +85,7 @@ O funil mostra como a probabilidade dos principais favoritos diminui à medida q
 ### Round of 32: equilíbrio dos confrontos
 
 <p align="center">
-  <img src="outputs/professional_round32_balance.png" alt="Probabilidades profissionais dos confrontos do Round of 32" width="950">
+  <img src="outputs/professional_round32_balance.png?v=20260628-nofonte" alt="Probabilidades profissionais dos confrontos do Round of 32" width="950">
 </p>
 
 A visualização acima destaca quais confrontos do chaveamento real de 28/06 têm favorito claro e quais tendem a ser mais equilibrados.
