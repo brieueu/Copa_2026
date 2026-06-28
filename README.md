@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>Pipeline analítico para estimar probabilidades da Copa do Mundo FIFA 2026 usando dados esportivos, força técnica das seleções e simulação Monte Carlo.</b>
+  <b>Pipeline analítico para estimar probabilidades da Copa do Mundo FIFA 2026 usando Elo dinâmico, forma recente, sede/local, pênaltis e simulação Monte Carlo.</b>
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 
 ## Visão geral
 
-Este repositório apresenta um projeto completo de análise preditiva para a Copa do Mundo de 2026. A solução combina dados públicos, engenharia de atributos e simulação probabilística para estimar o desempenho esperado das 48 seleções no novo formato do torneio.
+Este repositório apresenta um projeto completo de análise preditiva para a Copa do Mundo de 2026. A versão `v0.2.0` combina dados públicos, resultados reais da fase de grupos, engenharia de atributos e simulação probabilística para estimar o desempenho esperado das 48 seleções no novo formato do torneio.
 
 O projeto foi estruturado para ser auditável e reprodutível: os dados brutos ficam separados das bases processadas, os notebooks documentam a análise e os scripts em `tools/` permitem regenerar os principais artefatos.
 
@@ -49,16 +49,16 @@ O modelo estima:
 
 | Rank | Seleção | Título | Final | Semifinal |
 |---:|---|---:|---:|---:|
-| 1 | Espanha | 22,38% | 33,28% | 48,61% |
-| 2 | França | 21,08% | 32,89% | 48,12% |
-| 3 | Alemanha | 13,24% | 23,79% | 41,46% |
-| 4 | Portugal | 7,99% | 16,43% | 31,20% |
-| 5 | Argentina | 6,72% | 13,95% | 26,05% |
-| 6 | Brasil | 6,35% | 13,23% | 25,19% |
-| 7 | Inglaterra | 5,74% | 12,36% | 23,19% |
-| 8 | Croácia | 2,44% | 6,40% | 14,28% |
-| 9 | Suíça | 2,20% | 6,09% | 15,26% |
-| 10 | Bélgica | 2,17% | 5,86% | 14,59% |
+| 1 | Espanha | 19,75% | 30,91% | 43,58% |
+| 2 | França | 17,30% | 27,31% | 42,75% |
+| 3 | Argentina | 16,32% | 26,48% | 40,94% |
+| 4 | Alemanha | 6,72% | 14,10% | 28,33% |
+| 5 | Inglaterra | 6,68% | 13,36% | 24,24% |
+| 6 | Brasil | 6,19% | 12,59% | 24,68% |
+| 7 | Portugal | 5,74% | 11,90% | 22,84% |
+| 8 | Bélgica | 3,41% | 8,27% | 16,92% |
+| 9 | Colômbia | 2,73% | 6,77% | 14,75% |
+| 10 | Suíça | 1,66% | 4,63% | 12,02% |
 
 ---
 
@@ -92,16 +92,51 @@ A visualização acima destaca quais confrontos simulados têm favorito claro e 
 
 ---
 
-## Metodologia
+## O que mudou na v0.2.0
+
+- Elo dinâmico atualizado jogo a jogo com margem de vitória e peso de competição.
+- Forma recente calculada a partir dos últimos 10 jogos e dos últimos 6 meses antes do torneio.
+- Sede/local incorporados como vantagem Elo conservadora para país-sede e região.
+- Mata-mata com separação explícita entre vitória em 90/120 minutos e disputa por pênaltis.
+- Pesos auditáveis em `Data/processed/model_weights_v0.2.0.json`.
+- Nova rodada Monte Carlo com `100.000` torneios e outputs regenerados.
+
+---
+
+## Avaliação da v0.1.0 após a fase de grupos
+
+A `v0.1.0` foi útil como linha de base: ela estruturou os dados, criou o pipeline Monte Carlo e gerou probabilidades claras para o formato de 48 seleções. Porém, depois que resultados reais entram no torneio, um modelo majoritariamente estático fica limitado.
+
+### Sucessos da v0.1.0
+
+- manteve favoritos fortes com alta probabilidade de avanço;
+- comunicou incerteza em forma de distribuição, não como previsão determinística;
+- organizou fixtures, grupos, melhores terceiros e chaveamento de forma reprodutível;
+- ofereceu bons artefatos visuais para apresentação e revisão.
+
+### Fracassos e limitações da v0.1.0
+
+- rating estático demais para reagir a resultados reais;
+- pouca sensibilidade a placares como goleadas;
+- tendência a subestimar zebras e picos de forma recentes;
+- pênaltis tratados indiretamente como vitória binária simples;
+- sede/local com peso fraco e pouco documentado.
+
+---
+
+## Metodologia v0.2.0
 
 A simulação usa uma medida composta de força por seleção. Essa força é construída a partir de diferentes dimensões de dados:
 
-- histórico e rating Elo;
+- Elo dinâmico pós-fase de grupos;
 - probabilidades e fixtures de bases externas;
 - ratings de jogadores do EA Sports FC 26;
 - estatísticas complementares do EA Sports FC 25;
 - força do elenco por setor: ataque, meio, defesa e goleiros;
 - valor de mercado e indicadores de experiência;
+- forma recente;
+- sede/local;
+- pênaltis no mata-mata;
 - ajuste para confrontos intercontinentais com pouco histórico direto.
 
 A partir dessa força relativa, o projeto simula partidas, fase de grupos, classificação de melhores terceiros, chaveamento e mata-mata. O resultado final não é uma previsão determinística, mas uma distribuição de probabilidades.
@@ -110,7 +145,7 @@ A partir dessa força relativa, o projeto simula partidas, fase de grupos, class
 
 ## Dados utilizados
 
-As bases foram organizadas a partir de datasets públicos do Kaggle:
+As bases foram organizadas a partir de datasets públicos do Kaggle e snapshots externos da `v0.2.0`:
 
 | Fonte | Uso no projeto |
 |---|---|
@@ -118,8 +153,12 @@ As bases foram organizadas a partir de datasets públicos do Kaggle:
 | `afonsofernandescruz/2026-fifa-world-cup-historical-elo-ratings` | Rating Elo histórico das seleções |
 | `samandarabdujabbar/ea-sports-fc-25-complete-player-stats-and-analysis` | Estatísticas complementares e valor de mercado |
 | `pranishkessi/fifa-world-cup-2026-prediction-simulator` | Grupos, fixtures, slots de chaveamento e probabilidades de referência |
+| `openfootball_worldcup_2026.json` | Resultados e fixtures reais da Copa 2026 |
+| `international_results.csv` | Forma recente das seleções |
+| `international_shootouts.csv` | Histórico de disputas por pênaltis |
+| `world_football_elo_*.tsv` | Ratings, resultados, fixtures e mapeamentos World Football Elo |
 
-Mais detalhes sobre os dados estão em `Data/README.md`.
+Mais detalhes sobre os dados estão em `Data/README.md` e em `Data/raw/external/v0.2.0_dynamic_elo/DOWNLOAD_MANIFEST.json`.
 
 ---
 
