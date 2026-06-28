@@ -1,0 +1,13 @@
+{
+  "version": "v0.2.0",
+  "description": "Pesos auditáveis para força composta com Elo dinâmico, forma recente, sede/local e prior v0.1.0.",
+  "weights": {
+    "dynamic_elo": 0.42,
+    "squad_fc26": 0.18,
+    "squad_fc25_market_experience": 0.08,
+    "recent_form_last_10": 0.16,
+    "recent_form_six_month": 0.08,
+    "location": 0.05,
+    "external_prior_v0_1": 0.03
+  }
+}
