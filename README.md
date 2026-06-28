@@ -92,22 +92,6 @@ A visualização acima destaca quais confrontos do chaveamento real de 28/06 tê
 
 ---
 
-### Artefatos visuais gerados
-
-Além dos gráficos profissionais usados nas seções principais, o pipeline também gera visualizações complementares em `outputs/` para auditoria e comparação dos resultados.
-
-<p align="center">
-  <img src="outputs/updated_champion_probabilities.png" alt="Probabilidades atualizadas de campeão" width="48%">
-  <img src="outputs/updated_phase_progression_heatmap.png" alt="Heatmap atualizado de progressão por fase" width="48%">
-</p>
-
-<p align="center">
-  <img src="outputs/round_of_32_bracket_probabilities.png" alt="Probabilidades dos confrontos do Round of 32" width="48%">
-  <img src="outputs/monte_carlo_champion_distribution.png" alt="Distribuição Monte Carlo dos campeões" width="48%">
-</p>
-
----
-
 ## O que mudou na v0.2.0
 
 - Elo dinâmico atualizado jogo a jogo com margem de vitória e peso de competição.
