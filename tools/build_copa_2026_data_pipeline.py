@@ -12,6 +12,11 @@ import nbformat as nbf
 import numpy as np
 import pandas as pd
 
+try:
+    from team_name_normalization import normalized_team_key as shared_norm_name
+except ImportError:  # notebook/pytest import fallback
+    from tools.team_name_normalization import normalized_team_key as shared_norm_name
+
 ROOT = Path.cwd()
 DATA = ROOT / "Data"
 RAW = DATA / "raw" / "kaggle"
@@ -45,14 +50,7 @@ ALIASES = {
 
 
 def norm_name(x) -> str:
-    if pd.isna(x):
-        return ""
-    s = str(x).strip().lower()
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
-    s = s.replace("&", " and ")
-    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
-    s = re.sub(r"\s+", " ", s)
-    return ALIASES.get(s, s)
+    return shared_norm_name(x)
 
 
 def logistic(x: float) -> float:
