@@ -49,16 +49,16 @@ O modelo estima:
 
 | Rank | Seleção | Título | Final | Semifinal |
 |---:|---|---:|---:|---:|
-| 1 | Espanha | 19,75% | 30,91% | 43,58% |
-| 2 | França | 17,30% | 27,31% | 42,75% |
-| 3 | Argentina | 16,32% | 26,48% | 40,94% |
-| 4 | Alemanha | 6,72% | 14,10% | 28,33% |
-| 5 | Inglaterra | 6,68% | 13,36% | 24,24% |
-| 6 | Brasil | 6,19% | 12,59% | 24,68% |
-| 7 | Portugal | 5,74% | 11,90% | 22,84% |
-| 8 | Bélgica | 3,41% | 8,27% | 16,92% |
-| 9 | Colômbia | 2,73% | 6,77% | 14,75% |
-| 10 | Suíça | 1,66% | 4,63% | 12,02% |
+| 1 | Argentina | 23,11% | 40,29% | 59,51% |
+| 2 | Espanha | 18,57% | 29,00% | 45,06% |
+| 3 | França | 17,65% | 28,84% | 47,52% |
+| 4 | Inglaterra | 8,15% | 17,52% | 35,12% |
+| 5 | Brasil | 5,83% | 12,58% | 25,64% |
+| 6 | Alemanha | 4,98% | 10,21% | 21,45% |
+| 7 | Portugal | 3,61% | 7,60% | 15,77% |
+| 8 | Colômbia | 3,41% | 9,27% | 19,32% |
+| 9 | Bélgica | 3,09% | 7,20% | 16,56% |
+| 10 | Holanda | 1,52% | 4,21% | 11,67% |
 
 ---
 
@@ -100,6 +100,7 @@ A visualização acima destaca quais confrontos simulados têm favorito claro e 
 - Mata-mata com separação explícita entre vitória em 90/120 minutos e disputa por pênaltis.
 - Pesos auditáveis em `Data/processed/model_weights_v0.2.0.json`.
 - Nova rodada Monte Carlo com `100.000` torneios e outputs regenerados.
+- Chaveamento real do dia 28/06 usado no mata-mata a partir do Round of 32.
 
 ---
 

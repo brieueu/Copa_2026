@@ -1,3 +1,3 @@
 d2385719f8d03bce5f8731aa97a8d9bd686bdf890ef37a75e62e6b2aceb2679a  dist/releases/v0.2.0/copa_2026_v0.2.0_bases_de_dados.zip
-9bb45e1ae7fc722061dc8a69e8b999191190128524fdfb919aed2096c5805200  dist/releases/v0.2.0/copa_2026_v0.2.0_graficos.zip
-fc480dfae33abc4f9d089c4bf288819a22add3e4ac5424521bb8cda828a5fed2  dist/releases/v0.2.0/copa_2026_v0.2.0_outputs_modelo.zip
+c7c630a7b23821ec1540ced8738cc58fdd538db73abc731983567d21443b6dbb  dist/releases/v0.2.0/copa_2026_v0.2.0_graficos.zip
+d1590ed5412d06623f42df41b6f16fcf8f0cd3b0837ca8885408d7974411cde8  dist/releases/v0.2.0/copa_2026_v0.2.0_outputs_modelo.zip

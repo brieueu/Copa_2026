@@ -113,6 +113,9 @@ def load_feature_table() -> pd.DataFrame:
 
 def main() -> None:
     features = load_feature_table()
+    actual = pd.read_csv(PROCESSED / "actual_2026_matches.csv")
+    actual["home_team"] = actual["home_team"].map(canonical_team_name)
+    actual["away_team"] = actual["away_team"].map(canonical_team_name)
     team_names = features["team"].tolist()
     team_to_idx = {t: i for i, t in enumerate(team_names)}
     idx_to_team = {i: t for t, i in team_to_idx.items()}
@@ -191,12 +194,25 @@ def main() -> None:
     phase_cols = ["group_stage_probability", "round_of_32_probability", "round_of_16_probability", "quarter_final_probability", "semi_final_probability", "final_probability", "champion_probability"]
     counts = {col: np.zeros(T, dtype=np.int32) for col in phase_cols}
     counts["group_stage_probability"][:] = N
-    counts["round_of_32_probability"] += (position <= 2).sum(axis=0)
+
+    # A partir da v0.2.0, o mata-mata usa o chaveamento real disponível
+    # no snapshot OpenFootball de 28/06, não os classificados simulados.
+    # A simulação da fase de grupos continua sendo gravada como cenário seed42,
+    # mas as probabilidades de avanço do mata-mata partem dos 32 classificados reais.
+    actual_knockout = actual[actual["stage_type"].eq("knockout")].copy().sort_values("match_id")
+    actual_round32 = actual_knockout[actual_knockout["round"].eq("Round of 32")].copy()
+    if len(actual_round32) != 16:
+        raise ValueError(f"expected 16 real Round of 32 fixtures, got {len(actual_round32)}")
+    for team in pd.concat([actual_round32["home_team"], actual_round32["away_team"]]).map(canonical_team_name):
+        if team in team_to_idx:
+            counts["round_of_32_probability"][team_to_idx[team]] = N
+        else:
+            raise KeyError(f"Round of 32 team not found in master dataset: {team}")
+
+    # Best thirds are still calculated for the seed42 group table artifact only.
     third_candidates = np.column_stack([group_rankings[g][:, 2] for g in groups])
     third_order = np.lexsort((-strength[third_candidates], -wins[np.arange(N)[:, None], third_candidates], -gf[np.arange(N)[:, None], third_candidates], -gd[np.arange(N)[:, None], third_candidates], -points[np.arange(N)[:, None], third_candidates]), axis=1)
     best_thirds_by_sim = third_candidates[np.arange(N)[:, None], third_order[:, :8]]
-    for sim in range(N):
-        counts["round_of_32_probability"][best_thirds_by_sim[sim]] += 1
 
     first_table_rows = []
     for g in groups:
@@ -212,35 +228,25 @@ def main() -> None:
     champion_names = []
     first_bracket_rows = None
 
+    actual_knockout_records = actual_knockout.to_dict("records")
+
+    def resolve_actual_side(value, match_results):
+        value = canonical_team_name(value)
+        if value.startswith("W") and value[1:].isdigit():
+            return match_results[int(value[1:])]["winner"]
+        if value.startswith("L") and value[1:].isdigit():
+            return match_results[int(value[1:])]["loser"]
+        if value not in team_to_idx:
+            raise KeyError(f"knockout side not found in master dataset: {value}")
+        return team_to_idx[value]
+
     for sim in range(N):
-        group_winners = {g: int(group_rankings[g][sim, 0]) for g in groups}
-        group_runners = {g: int(group_rankings[g][sim, 1]) for g in groups}
-        available_thirds = {features.loc[idx, "group"]: int(idx) for idx in best_thirds_by_sim[sim]}
-        third_assignments = {}
-        third_slots = slots[(slots["stage"] == "Round of 32") & ((slots["home_slot_type"] == "best_third") | (slots["away_slot_type"] == "best_third"))]
-        for slot in third_slots.itertuples():
-            side = "home" if slot.home_slot_type == "best_third" else "away"
-            allowed_raw = getattr(slot, f"{side}_allowed_third_groups")
-            allowed = str(allowed_raw).split(",") if pd.notna(allowed_raw) else []
-            chosen = None
-            for group in [features.loc[idx, "group"] for idx in best_thirds_by_sim[sim]]:
-                if group in allowed and group in available_thirds:
-                    chosen = group; break
-            if chosen is None and available_thirds:
-                chosen = next(iter(available_thirds))
-            third_assignments[(int(slot.match_id), side)] = available_thirds.pop(chosen) if chosen else None
-        match_results = {}; rows = []
-        for slot in slots.itertuples():
-            def resolve(side):
-                typ = getattr(slot, f"{side}_slot_type")
-                if typ == "winner_group": return group_winners[getattr(slot, f"{side}_group_ref")]
-                if typ == "runner_up_group": return group_runners[getattr(slot, f"{side}_group_ref")]
-                if typ == "best_third": return third_assignments[(int(slot.match_id), side)]
-                if typ == "winner_match": return match_results[int(getattr(slot, f"{side}_match_ref"))]["winner"]
-                if typ == "loser_match": return match_results[int(getattr(slot, f"{side}_match_ref"))]["loser"]
-                raise ValueError(typ)
-            home = resolve("home"); away = resolve("away")
-            host = canonical_team_name(getattr(slot, "host_country", ""))
+        match_results = {}
+        rows = []
+        for match in actual_knockout_records:
+            match_id = int(match["match_id"])
+            home = resolve_actual_side(match["home_team"], match_results)
+            away = resolve_actual_side(match["away_team"], match_results)
             probs = knockout_resolution_probability(float(strength[home]), float(strength[away]), float(pen_strength[home]), float(pen_strength[away]))
             sample = rng.random()
             if sample < probs["p_home_regular_extra"]:
@@ -251,13 +257,18 @@ def main() -> None:
                 winner = home if rng.random() < probs["p_penalty_home"] else away
                 loser = away if winner == home else home
                 resolution = "penalties"
-            match_results[int(slot.match_id)] = {"winner": winner, "loser": loser}
-            if slot.stage in stage_to_col: counts[stage_to_col[slot.stage]][winner] += 1
-            if slot.stage == "Final": counts["champion_probability"][winner] += 1; champion_names.append(idx_to_team[winner])
+            match_results[match_id] = {"winner": winner, "loser": loser}
+            stage = match["round"]
+            if stage in stage_to_col:
+                counts[stage_to_col[stage]][winner] += 1
+            if stage == "Final":
+                counts["champion_probability"][winner] += 1
+                champion_names.append(idx_to_team[winner])
             if sim == 0:
                 p_home_total = probs["p_home_regular_extra"] + probs["p_draw_after_extra_time"] * probs["p_penalty_home"]
-                rows.append({"match_id": int(slot.match_id), "stage": slot.stage, "slot_home": slot.slot_home, "slot_away": slot.slot_away, "team_home": idx_to_team[home], "team_away": idx_to_team[away], "host_country": host, "stadium": getattr(slot, "stadium", ""), "city": getattr(slot, "city", ""), "p_home_win": p_home_total, "p_away_win": 1 - p_home_total, "p_penalty_home": probs["p_penalty_home"], "p_penalty_away": probs["p_penalty_away"], "p_draw_after_extra_time": probs["p_draw_after_extra_time"], "knockout_resolution": resolution, "won_by_penalties": resolution == "penalties", "most_likely_winner": idx_to_team[home if p_home_total >= 0.5 else away], "simulated_winner": idx_to_team[winner], "simulated_loser": idx_to_team[loser]})
-        if sim == 0: first_bracket_rows = pd.DataFrame(rows)
+                rows.append({"match_id": match_id, "stage": stage, "slot_home": match["home_team"], "slot_away": match["away_team"], "team_home": idx_to_team[home], "team_away": idx_to_team[away], "host_country": match.get("host_country", ""), "stadium": match.get("stadium", ""), "city": match.get("city", ""), "p_home_win": p_home_total, "p_away_win": 1 - p_home_total, "p_penalty_home": probs["p_penalty_home"], "p_penalty_away": probs["p_penalty_away"], "p_draw_after_extra_time": probs["p_draw_after_extra_time"], "knockout_resolution": resolution, "won_by_penalties": resolution == "penalties", "most_likely_winner": idx_to_team[home if p_home_total >= 0.5 else away], "simulated_winner": idx_to_team[winner], "simulated_loser": idx_to_team[loser], "bracket_source": "openfootball_real_bracket_2026-06-28"})
+        if sim == 0:
+            first_bracket_rows = pd.DataFrame(rows)
 
     probabilities = pd.DataFrame({"team": team_names})
     for col in phase_cols:
