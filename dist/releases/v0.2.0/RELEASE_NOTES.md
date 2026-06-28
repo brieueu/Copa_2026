@@ -30,14 +30,14 @@ A v0.1.0 funcionou como baseline reprodutível e visual, mas tinha baixa sensibi
 ## Como reproduzir
 
 ```bash
-python -m pytest -q
 python tools/build_actual_2026_results.py
 python tools/dynamic_elo.py --matches Data/processed/actual_2026_matches.csv --out Data/processed/dynamic_elo_after_group_stage.csv
 python tools/build_recent_form_features.py
 python tools/run_fast_100k_simulation.py
 python tools/create_professional_readme_charts.py
-python -m pytest -q
 ```
+
+Observação: a branch pública `release/v0.2.0-public` não inclui `tests/` nem arquivos/diretórios iniciados por ponto, como `.hermes/`.
 
 ## Packages anexáveis
 
@@ -52,4 +52,4 @@ Consulte `dist/releases/v0.2.0/SHA256SUMS.txt`.
 
 ## Publicação
 
-Nenhum push, tag ou GitHub Release foi executado nesta etapa.
+Release publicada a partir da branch `release/v0.2.0-public`, com packages anexados e checksums em `SHA256SUMS.txt`.
