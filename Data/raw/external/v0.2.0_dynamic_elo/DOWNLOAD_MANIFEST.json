@@ -1,0 +1,142 @@
+{
+  "datasets": [
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/openfootball_worldcup_2026.json",
+      "source_url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 35349,
+      "sha256": "fa1bc3905a1bcb7efcdb7c4b37673286580f06b9d1cfd7e5cc5058859adf8239",
+      "downloaded_at_utc": "2026-06-28T14:31:38.271465+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/international_results.csv",
+      "source_url": "https://raw.githubusercontent.com/martj42/international_results/master/results.csv",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 3725505,
+      "sha256": "a30f5a34fd339d67563289e1ef745028663f5f12b2aad6eba7765efc5bc6823e",
+      "downloaded_at_utc": "2026-06-28T14:31:38.495683+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/international_shootouts.csv",
+      "source_url": "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 28809,
+      "sha256": "e52e503badc11021d5d243ddf2288346f63ad028bf8de75ae9cfb72c5475d807",
+      "downloaded_at_utc": "2026-06-28T14:31:38.570259+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/international_goalscorers.csv",
+      "source_url": "https://raw.githubusercontent.com/martj42/international_results/master/goalscorers.csv",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 3268765,
+      "sha256": "7d96df5a7450af86a84335120f2a06f8047af626701cb4a87d56c4d1d2679f9d",
+      "downloaded_at_utc": "2026-06-28T14:31:38.812662+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_current.tsv",
+      "source_url": "https://www.eloratings.net/World.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 28 Jun 2026 10:19:17 GMT",
+      "bytes": 30479,
+      "sha256": "39bb14cd8655e3cff8841c6f34fa1384ec40654c20f849f799ce63cf7c6e4375",
+      "downloaded_at_utc": "2026-06-28T14:31:39.415079+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_latest_results.tsv",
+      "source_url": "https://www.eloratings.net/latest.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 28 Jun 2026 10:19:17 GMT",
+      "bytes": 20364,
+      "sha256": "85604b575754147034c8358775e48af49b5a2d8c8dd376a951dba951e6436d31",
+      "downloaded_at_utc": "2026-06-28T14:31:40.115088+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_2026_results.tsv",
+      "source_url": "https://www.eloratings.net/2026_results.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 28 Jun 2026 10:19:17 GMT",
+      "bytes": 21614,
+      "sha256": "ce8edad201bd45f6ec84c73c1a6fa40c17311c9fda82d513e05a6604330df208",
+      "downloaded_at_utc": "2026-06-28T14:31:40.713775+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_fixtures.tsv",
+      "source_url": "https://www.eloratings.net/fixtures.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 28 Jun 2026 10:19:17 GMT",
+      "bytes": 28865,
+      "sha256": "c0e9e314cc25ee8a0977a5d9d6c216f44a1e1274487206e54d4540eb299070d4",
+      "downloaded_at_utc": "2026-06-28T14:31:41.309811+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_teams.tsv",
+      "source_url": "https://www.eloratings.net/teams.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 14 Dec 2025 16:20:24 GMT",
+      "bytes": 335,
+      "sha256": "47e4391e33bd6adc64915f8676ce749bb1ae88c9d62953d7a17c22bfdafa70bd",
+      "downloaded_at_utc": "2026-06-28T14:31:41.758543+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_en_teams.tsv",
+      "source_url": "https://www.eloratings.net/en.teams.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sun, 01 Mar 2026 22:51:42 GMT",
+      "bytes": 7277,
+      "sha256": "ff4b8c9c7bcdad56e81a007726c1a655c6dabdf77bca151b1d619f24125dbc90",
+      "downloaded_at_utc": "2026-06-28T14:31:42.210153+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_tournaments.tsv",
+      "source_url": "https://www.eloratings.net/tournaments.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Thu, 23 Jan 2025 11:09:16 GMT",
+      "bytes": 333,
+      "sha256": "0b5a08b720eb6538efc7bac0e01b029da05f99d356f1cc5e9f566b6c8207deb1",
+      "downloaded_at_utc": "2026-06-28T14:31:42.657316+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_en_tournaments.tsv",
+      "source_url": "https://www.eloratings.net/en.tournaments.tsv",
+      "http_status": 200,
+      "content_type": "text/tab-separated-values",
+      "last_modified": "Sat, 06 Jun 2026 11:50:38 GMT",
+      "bytes": 41791,
+      "sha256": "510226115e4a878cd8234740ffbedc9cbb639db58f61ee84ab707884e0492648",
+      "downloaded_at_utc": "2026-06-28T14:31:43.254236+00:00"
+    },
+    {
+      "file": "Data/raw/external/v0.2.0_dynamic_elo/world_football_elo_ratings_js.txt",
+      "source_url": "https://www.eloratings.net/scripts/ratings.js",
+      "http_status": 200,
+      "content_type": "text/javascript",
+      "last_modified": "Sat, 14 Mar 2026 16:51:32 GMT",
+      "bytes": 102156,
+      "sha256": "5d452771f1702e92d0bd765464b827ce9b3879a134bcd4268ea84f53d3e35500",
+      "downloaded_at_utc": "2026-06-28T14:31:44.159842+00:00"
+    }
+  ],
+  "notes": {
+    "note": "FiveThirtyEight soccer API endpoints tested returned HTML pages, not CSV/JSON datasets, so they are recorded as methodology references only in the development plan. World Football Elo TSV and international-results CSV are the actionable dynamic Elo/form datasets.",
+    "tested_fivethirtyeight_urls": [
+      "https://projects.fivethirtyeight.com/soccer-api/international/forecasts",
+      "https://projects.fivethirtyeight.com/soccer-api/international/spi_global_rankings.csv",
+      "https://projects.fivethirtyeight.com/soccer-api/club/spi_global_rankings.csv"
+    ]
+  }
+}
